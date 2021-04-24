@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR
+    i,j,sum = 0;
+    arr1 = [10, 12, 16, 5];
+    arr2 = [13, 12, 14, 6];
+
+
+BEGIN
+   
+
+    for i de  0 a arr1.length  STEP 1 Do) {
+        j = 0;
+        while (j < arr2.length) {
+            if (arr1[i] != arr2[j] && j == arr2.length - 1) {
+                sum += arr1[i];
+            } else if (arr1[i] == arr2[j]) {
+                break;
+            }
+            j++;
+        }
+    }
+    for i de 0 a arr2.length STEP 1 Do) {
+        j = 0;
+        while (j < arr1.length) {
+            if (arr2[i] != arr1[j] && j == arr2.length - 1) {
+                sum += arr2[i];
+            } else if (arr2[i] == arr1[j]) {
+                break;
+            }
+            j++;
+        }
+    }
+
+
+    print("Sum of distinct element ", sum)
+END

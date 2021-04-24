@@ -1,0 +1,40 @@
+ALGORITHM DistinctElementsInTwoSets
+VAR
+    
+    htab : HASH_TABLE<INTEGER,INTEGER>;
+    setOne = {3, 1, 7, 9};
+    setTwo = {2, 4, 1, 9, 3};
+    i,j : Integer
+BEGIN
+
+//Fill htab with distinct elements and its count from the two arrays
+    for i de 0 a setOne.length-1 Step 1 Do {
+            int element = setOne[i];
+            if(htab.containsKey(element)) {
+                int count = htab.get(element);
+                htab.put(element, count+1);
+            }else
+                htab.put(element, 1);
+        }
+
+        for i de 0 a setTwo.length-1 Step 1 Do{
+            int element = setTwo[i];
+            if(htab.containsKey(element)) {
+                int count = htab.get(element);
+                htab.put(element, count+1);
+            }else
+                htab.put(element, 1);
+        }
+
+        //get sum of distinct elements
+        int sum = 0;
+        Set<Integer> set = htab.keySet(); //returns a set having the keys of the hash table
+        Iterator<Integer> iterator = set.iterator(); //Iterating through the Set of keys
+        while (iterator.hasNext()){
+            int key = iterator.next();
+            if(htab.get(key)==1)
+                sum += key;
+        }
+
+        Print("Distinct Elements Sum : " , sum);
+END

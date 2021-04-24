@@ -1,0 +1,18 @@
+ALGORITHM DuplicateElements
+VAR
+ arr1 = [12, 13, 6, 10];
+ arr2 = [13, 10, 16, 15];
+ i,j,sum= 0;
+BEGIN
+   for(var i=0; i<arr1.length-1; i++){
+   j = 0;
+   while(j<arr2.length-1)
+    {
+        if (arr1[i] == arr2[j]){   
+            sum += arr1[i] + arr2[j];
+        }
+        j++; 
+    }
+  }
+ print("Sum of duplicated Element",sum)
+END
