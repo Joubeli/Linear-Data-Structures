@@ -4,15 +4,17 @@ VAR
  arr2 = [13, 10, 16, 15];
  i,j,sum= 0;
 BEGIN
-   for(var i=0; i<arr1.length-1; i++){
-   j = 0;
-   while(j<arr2.length-1)
-    {
-        if (arr1[i] == arr2[j]){   
+
+FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+     j = 0;
+     WHILE (j<arr2.length-1) DO
+          if (arr1[i] == arr2[j]){   
             sum += arr1[i] + arr2[j];
         }
-        j++; 
-    }
-  }
+        j++;
+     END_WHILE
+   
+END_FOR
+  
  print("Sum of duplicated Element",sum)
 END
