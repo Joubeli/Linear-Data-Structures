@@ -1,4 +1,4 @@
-ALGORITHM DistinctElementsInTwoSets
+ALGORITHM DistinctElements
 VAR
     
     htab : HASH_TABLE<INTEGER,INTEGER>;

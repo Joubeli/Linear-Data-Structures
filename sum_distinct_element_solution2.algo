@@ -1,4 +1,4 @@
-ALGORITHM algorithm_name
+ALGORITHM DistinctElements
 VAR
     i,j,sum = 0;
     arr1 = [10, 12, 16, 5];
